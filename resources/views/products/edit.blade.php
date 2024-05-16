@@ -21,7 +21,7 @@
                 <div class="col-md-10">
                     <div class="card borde-0 shadow-lg my-4">
                         <div class="card-header bg-dark">
-                            <h3 class='text-white'>Create Product</h3>
+                            <h3 class='text-white'>Edit Product</h3>
                         </div>
                         <form enctype="multipart/form-data" action="{{route('products.store')}}" method="post">
                             @csrf
@@ -29,7 +29,7 @@
                                 <div class="mb-3">
                                     <label for="name" class='form-label h5'>Name</label>
                                     <input
-                                        value="{{old('name')}}"
+                                        value="{{$product->name}}"
                                         type="text" 
                                         class='@error('name') is-invalid @enderror form-control-lg form-control' 
                                         placeholder="Name" 
